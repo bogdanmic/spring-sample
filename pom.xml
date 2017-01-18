@@ -52,6 +52,14 @@
             <artifactId>jcl-over-slf4j</artifactId>
         </dependency>
         <!-- END: Add logging dependency -->
+
+        <!-- START: Add DevTools for Spring to the project. These should help a lot. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- END: Add DevTools for Spring to the project. THese should help a lot. -->
     </dependencies>
 
     <build>
