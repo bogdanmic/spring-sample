@@ -60,6 +60,18 @@
             <scope>runtime</scope>
         </dependency>
         <!-- END: Add DevTools for Spring to the project. THese should help a lot. -->
+        <!-- START: Spring actuator which offers some health check endpoints for your app -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!-- END: Spring actuator which offers some health check endpoints for your app -->
+        <!-- START: Dependency to be able to create Endpoints. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- END: Dependency to be able to create Endpoints. -->
     </dependencies>
 
     <build>
