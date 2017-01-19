@@ -1,5 +1,6 @@
 package com.gd.controllers;
 
+import com.gd.annotations.Loggable;
 import com.gd.dto.GreetingDTO;
 import com.gd.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class SimpleRESTController {
     }
 
 
+    @Loggable
     @RequestMapping(value = "/hello/{name}", method = RequestMethod.GET)
     public
     @ResponseBody

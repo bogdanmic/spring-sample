@@ -43,4 +43,12 @@ public class SampleAspect {
         return returnVal;
 
     }
+
+    @Around("@annotation(com.gd.annotations.Loggable)")
+    public Object doArroundWithAnnotation(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        logger.warn("--> AOP Around START Loggable Annotation: For: {}.", proceedingJoinPoint.getTarget());
+        Object returnVal = proceedingJoinPoint.proceed();
+        logger.warn("--> AOP Around END Loggable Annotation: For: {}. Result={}.", proceedingJoinPoint.getTarget(), returnVal);
+        return returnVal;
+    }
 }
