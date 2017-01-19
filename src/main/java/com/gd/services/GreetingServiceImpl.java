@@ -1,7 +1,7 @@
 package com.gd.services;
 
 import com.gd.dto.GreetingDTO;
-import com.gd.repository.GreetingRepository;
+import com.gd.repositories.GreetingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

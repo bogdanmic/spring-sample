@@ -72,6 +72,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!-- END: Dependency to be able to create Endpoints. -->
+
+        <!-- START: Added AOP (Aspect orientated programming) dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!-- END: Added AOP (Aspect orientated programming) dependency -->
     </dependencies>
 
     <build>

@@ -1,4 +1,4 @@
-package com.gd.repository;
+package com.gd.repositories;
 
 import com.gd.dto.GreetingDTO;
 
