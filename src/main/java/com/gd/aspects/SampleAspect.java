@@ -2,6 +2,7 @@ package com.gd.aspects;
 
 import com.gd.components.HelloBean;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -22,9 +23,16 @@ public class SampleAspect {
     }
 
     @Before("helloBean()")
-    public void doAccessCheck(JoinPoint joinPoint) {
+    public void doHelloBeanAspect(JoinPoint joinPoint) {
         HelloBean target = (HelloBean) joinPoint.getTarget();
         logger.info("-->AOP: Asspect for {} was called. The targe it: {}.", joinPoint.toString(),target);
+    }
 
+    @Pointcut("target(com.gd.repositories.GreetingRepository)")
+    public void allClassesThatImplementGreetingRepository(){}
+
+    @After("allClassesThatImplementGreetingRepository()")
+    public void doInterfaceAspect(JoinPoint joinPoint) {
+        logger.info("-->AOP: Asspect for {} was called. The targe it: {}.", joinPoint.toString());
     }
 }
