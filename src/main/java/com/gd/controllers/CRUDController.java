@@ -3,6 +3,7 @@ package com.gd.controllers;
 import com.gd.models.Customer;
 import com.gd.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,5 +42,20 @@ public class CRUDController {
     @RequestMapping("/findbylastname/{lastname}")
     public List<Customer> fetchDataByLastName(@PathVariable("lastname") String lastName) {
         return repository.findByLastName(lastName);
+    }
+
+    @RequestMapping("/findbyfirstName/{firstName}")
+    public List<Customer> fetchDataByFirstName(@PathVariable("firstName") String firstName) {
+        return repository.findByFirstNameIgnoreCase(firstName);
+    }
+
+    @RequestMapping("/findbylastname2/{lastName}")
+    public List<Customer> fetchDataByLastName2(@PathVariable("lastName") String lastName) {
+        return repository.findByLastNameOrderByFirstNameAsc(lastName);
+    }
+
+    @RequestMapping("/findbylastname3/{lastName}")
+    public List<Object[]> fetchDataByLastName3(@PathVariable("lastName") String lastName) {
+        return repository.findByAsArrayAndSort(lastName, new Sort("fn_len"));
     }
 }

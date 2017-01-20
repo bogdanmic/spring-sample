@@ -16,6 +16,7 @@ public class Customer {
     @Column(name = "lastname")
     private String lastName;
 
+    // This constructor is used by the Customer Repository
     protected Customer() {
     }
 
