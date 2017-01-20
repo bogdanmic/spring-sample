@@ -91,6 +91,12 @@
             <scope>runtime</scope>
         </dependency>
         <!-- END: Add Spring Data and Postgres dependency so we can work with databases -->
+        <!-- START: Add dependency to spring data rest that allows us to expose repositories as REST services. Easy REST CRUD -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <!-- END: Add dependency to spring data rest that allows us to expose repositories as REST services. Easy REST CRUD -->
     </dependencies>
 
     <build>
