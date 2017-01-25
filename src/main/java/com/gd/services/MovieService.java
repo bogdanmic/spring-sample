@@ -1,7 +1,7 @@
 package com.gd.services;
 
 
-import com.gd.models.entities.samplea.Movie;
+import com.gd.models.entities.Movie;
 
 import java.util.List;
 

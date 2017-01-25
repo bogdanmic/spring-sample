@@ -1,6 +1,6 @@
-package com.gd.models.dao.samplea;
+package com.gd.models.dao;
 
-import com.gd.models.entities.samplea.Movie;
+import com.gd.models.entities.Movie;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

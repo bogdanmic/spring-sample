@@ -1,6 +1,6 @@
 package com.gd.repositories;
 
-import com.gd.models.Customer;
+import com.gd.models.entities.Customer;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

@@ -1,8 +1,8 @@
 package com.gd.services;
 
 
-import com.gd.models.dao.sampleb.ActorDAO;
-import com.gd.models.entities.sampleb.Actor;
+import com.gd.models.dao.ActorDAO;
+import com.gd.models.entities.Actor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

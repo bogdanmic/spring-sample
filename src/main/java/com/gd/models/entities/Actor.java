@@ -1,4 +1,4 @@
-package com.gd.models.entities.sampleb;
+package com.gd.models.entities;
 
 import javax.persistence.*;
 

@@ -1,6 +1,6 @@
-package com.gd.models.dao.sampleb;
+package com.gd.models.dao;
 
-import com.gd.models.entities.sampleb.Actor;
+import com.gd.models.entities.Actor;
 
 import java.util.List;
 

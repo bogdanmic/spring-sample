@@ -1,6 +1,6 @@
 package com.gd.services;
 
-import com.gd.models.entities.sampleb.Actor;
+import com.gd.models.entities.Actor;
 
 import java.util.List;
 

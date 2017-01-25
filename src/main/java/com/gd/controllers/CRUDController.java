@@ -1,6 +1,6 @@
 package com.gd.controllers;
 
-import com.gd.models.Customer;
+import com.gd.models.entities.Customer;
 import com.gd.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
