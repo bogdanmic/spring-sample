@@ -21,41 +21,43 @@ public class PhoneServiceImpl implements PhoneService {
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public void addPhone(Phone p) {
         this.phoneDAO.addPhone(p);
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public void updatePhone(Phone p) {
         this.phoneDAO.updatePhone(p);
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public List<Phone> listPhones() {
         return this.phoneDAO.listPhones();
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public Phone getPhoneById(int id) {
         return this.phoneDAO.getPhoneById(id);
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public void removePhone(int id) {
         this.phoneDAO.removePhone(id);
     }
 
     @Override
+    @Transactional("primaryTransactionManager")
     public Long countPhones() {
         return phoneDAO.countPhones();
     }
 
     @Override
+    @Transactional("primaryTransactionManager")
     public Long sumIds() {
         return phoneDAO.sumIds();
     }

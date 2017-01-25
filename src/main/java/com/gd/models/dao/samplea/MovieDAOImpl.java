@@ -15,7 +15,7 @@ public class MovieDAOImpl implements MovieDAO {
 
     private static final Logger logger = LoggerFactory.getLogger(MovieDAOImpl.class);
 
-    @PersistenceContext
+    @PersistenceContext(unitName="primaryEntityManagerFactory")
     EntityManager em;
 
     @Override

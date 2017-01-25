@@ -15,7 +15,7 @@ public class ActorDAOImpl implements ActorDAO {
 
     private static final Logger logger = LoggerFactory.getLogger(ActorDAOImpl.class);
 
-    @PersistenceContext
+    @PersistenceContext(unitName="primaryEntityManagerFactory")
     EntityManager em;
 
     @Override

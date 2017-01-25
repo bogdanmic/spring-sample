@@ -21,31 +21,31 @@ public class ActorServiceImpl implements ActorService {
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public void add(Actor p) {
         this.dao.add(p);
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public void update(Actor p) {
         this.dao.update(p);
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public List<Actor> list() {
         return this.dao.list();
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public Actor getById(int id) {
         return this.dao.getById(id);
     }
 
     @Override
-    @Transactional
+    @Transactional("primaryTransactionManager")
     public void remove(int id) {
         this.dao.remove(id);
     }

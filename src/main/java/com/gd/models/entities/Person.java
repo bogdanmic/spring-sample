@@ -1,10 +1,10 @@
-package com.gd.models;
+package com.gd.models.entities;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customer")
-public class Customer {
+@Table(name = "person")
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,10 +17,10 @@ public class Customer {
     private String lastName;
 
     // This constructor is used by the Customer Repository
-    protected Customer() {
+    protected Person() {
     }
 
-    public Customer(String firstName, String lastName) {
+    public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

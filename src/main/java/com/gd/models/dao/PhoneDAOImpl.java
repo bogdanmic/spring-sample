@@ -18,7 +18,7 @@ public class PhoneDAOImpl implements PhoneDAO {
 
     private static final Logger logger = LoggerFactory.getLogger(PhoneDAOImpl.class);
 
-    @PersistenceContext
+    @PersistenceContext(unitName="primaryEntityManagerFactory")
     EntityManager em;
 
     @Override
