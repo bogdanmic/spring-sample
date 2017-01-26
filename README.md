@@ -1,5 +1,7 @@
 # spring-example
 Spring Playground
+-
+The idea is to have them all in the same project just to see how they work together. If we create a project to demonstrate each of them then we won't know if they work and how they work together.
 
 Contains:
  - AOP example
