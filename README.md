@@ -3,16 +3,16 @@ Spring Playground
 -
 The idea is to have them all in the same project just to see how they work together. If we create a project to demonstrate each of them then we won't know if they work and how they work together.
 
-Contains:
+DONE:
  - AOP example
  - CRUD example
  - REST example
  - Hibernate example
  - DI example
- - Multiple Data Sources (WIP: on the develop branch)
+ - Multiple Data Sources (WIP: on the multi_db_v1 branch)
 
 TODO:
- - multiple DBs in a proper way not as it is now on the develop branch
+ - multiple DBs in a proper way not as it is now on the multi_db_v1 branch
  - cache example
  - security example
  - mvc example with templates
