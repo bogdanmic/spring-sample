@@ -28,4 +28,5 @@ TODO:
  - spring integration example. communicate between REST services. etc
  - kafka microservices message bus (stream kafka)
  - akka actor example
+ - deploy it as a docker image
  
