@@ -11,6 +11,7 @@ DONE:
  - Multiple Data Sources (**WIP**: on the multi_db_v1 branch)
  - Spring Cache example (with EHCache3)
  - MVC with Thymeleaf example (Thymeleaf reverse routing included)
+ - Custom Application event example
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
@@ -29,5 +30,4 @@ TODO:
  - akka actor example
  - deploy it as a docker image
  - config profiles
- - custom event handling
  
