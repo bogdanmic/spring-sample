@@ -6,7 +6,9 @@
 <body>
 <tr th:fragment="phone-tr (count,phone)" >
     <td th:text="${count}"></td>
-    <td th:text="${phone.id}"></td>
+    <td>
+        <a th:text="${phone.id}" th:href="@{/mvc/phone/{id}(id=${phone.id})}"></a>
+    </td>
     <td th:text="${phone.name}"></td>
     <td th:text="${phone.review}"></td>
 </tr>
