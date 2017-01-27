@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
+<head th:include="fragments/head::head"></head>
 <body>
-<div th:each="phone : ${phones}">
-    <p th:text="${phone.id}">Onions</p>
-    <p th:text="${phone.name}">2.41</p>
-    <p th:text="${phone.review}">yes</p>
+<header th:include="fragments/headers::header"></header>
+<div class="container-fluid">
+    <div th:each="phone : ${phones}">
+        <p th:text="${phone.id}">Onions</p>
+        <p th:text="${phone.name}">2.41</p>
+        <p th:text="${phone.review}">yes</p>
+    </div>
 </div>
+<footer th:include="fragments/headers::footer"></footer>
 </body>
 </html>
