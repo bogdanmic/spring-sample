@@ -28,4 +28,6 @@ TODO:
  - kafka microservices message bus (stream kafka)
  - akka actor example
  - deploy it as a docker image
+ - config profiles
+ - custom event handling
  
