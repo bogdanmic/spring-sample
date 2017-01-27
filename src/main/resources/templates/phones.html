@@ -16,12 +16,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="phone,iterStat : ${phones}">
-                    <td th:text="${iterStat.count}"></td>
-                    <td th:text="${phone.id}"></td>
-                    <td th:text="${phone.name}"></td>
-                    <td th:text="${phone.review}"></td>
-                </tr>
+                <div th:each="phone,iterStat : ${phones}" th:remove="tag">
+                    <tr th:replace="fragments/phone::phone-tr (count=${iterStat.count},phone=${phone})"></tr>
+                </div>
                 </tbody>
             </table>
         </div>
