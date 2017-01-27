@@ -4,6 +4,7 @@ import com.gd.services.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -20,5 +21,11 @@ public class ThymeleafController {
     public String listPhones(Model model) {
         model.addAttribute("phones", phoneService.listPhones());
         return "phones";
+    }
+
+    @RequestMapping("/mvc/phone/{id}")
+    public String removePhone(@PathVariable("id") int id, Model model) {
+        model.addAttribute("phone", phoneService.getPhoneById(id));
+        return "phone";
     }
 }
