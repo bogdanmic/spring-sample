@@ -1,7 +1,6 @@
-# spring-example
-Spring Playground
+Spring Playground - The Plan
 -
-The idea is to have them all in the same project just to see how they work together. If we create a project to demonstrate each of them then we won't know if they work and how they work together.
+The Plan is to have them all in the same project just to see how they work together. If we create a project to demonstrate each of them then we won't know if they work and how they work together.
 
 DONE:
  - AOP example
@@ -9,11 +8,11 @@ DONE:
  - REST example
  - Hibernate example
  - DI example
- - Multiple Data Sources (WIP: on the multi_db_v1 branch)
+ - Multiple Data Sources (**WIP**: on the multi_db_v1 branch)
+ - Spring Cache example (with EHCache3)
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch
- - cache example
  - security example
  - mvc example with templates
  - REST services docs. built in or swagger.io
