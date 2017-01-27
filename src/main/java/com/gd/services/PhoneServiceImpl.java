@@ -1,19 +1,23 @@
 package com.gd.services;
 
 
-import java.util.List;
-
+import com.gd.events.MyCustomEvent;
 import com.gd.models.dao.PhoneDAO;
 import com.gd.models.entities.Phone;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 @Service
-public class PhoneServiceImpl implements PhoneService {
+public class PhoneServiceImpl implements PhoneService, ApplicationEventPublisherAware {
 
     private PhoneDAO phoneDAO;
+    private ApplicationEventPublisher eventPublisher;
 
     @Autowired
     public void setPhoneDAO(PhoneDAO phoneDAO) {
@@ -33,8 +37,14 @@ public class PhoneServiceImpl implements PhoneService {
     }
 
     @Override
+    public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+        this.eventPublisher = applicationEventPublisher;
+    }
+
+    @Override
     @Transactional
     public List<Phone> listPhones() {
+        eventPublisher.publishEvent(new MyCustomEvent(this));
         return this.phoneDAO.listPhones();
     }
 
