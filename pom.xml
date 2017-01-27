@@ -113,6 +113,12 @@
             <artifactId>ehcache</artifactId>
         </dependency>
         <!-- END: Add cache dependency -->
+        <!-- START: Added templating support this depends also on spring-boot-starter-web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <!-- END: Added templating support -->
     </dependencies>
 
     <build>

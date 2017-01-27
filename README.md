@@ -10,11 +10,11 @@ DONE:
  - DI example
  - Multiple Data Sources (**WIP**: on the multi_db_v1 branch)
  - Spring Cache example (with EHCache3)
+ - MVC with Thymeleaf example (Thymeleaf reverse routing included)
 
 TODO:
- - multiple DBs in a proper way not as it is now on the multi_db_v1 branch
+ - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
  - security example
- - mvc example with templates
  - REST services docs. built in or swagger.io
  - angular example
  - mongoDB example
@@ -28,4 +28,6 @@ TODO:
  - kafka microservices message bus (stream kafka)
  - akka actor example
  - deploy it as a docker image
+ - config profiles
+ - custom event handling
  

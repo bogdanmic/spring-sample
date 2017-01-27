@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<tr th:fragment="phone-tr (count,phone)" >
+    <td th:text="${count}"></td>
+    <td>
+        <a th:text="${phone.id}" th:href="@{/mvc/phone/{id}(id=${phone.id})}"></a>
+    </td>
+    <td th:text="${phone.name}"></td>
+    <td th:text="${phone.review}"></td>
+</tr>
+</body>
+</html>
