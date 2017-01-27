@@ -12,7 +12,7 @@ DONE:
  - Spring Cache example (with EHCache3)
 
 TODO:
- - multiple DBs in a proper way not as it is now on the multi_db_v1 branch
+ - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
  - security example
  - mvc example with templates
  - REST services docs. built in or swagger.io

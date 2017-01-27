@@ -24,7 +24,7 @@ public class ThymeleafController {
     }
 
     @RequestMapping("/mvc/phone/{id}")
-    public String removePhone(@PathVariable("id") int id, Model model) {
+    public String editPhone(@PathVariable("id") int id, Model model) {
         model.addAttribute("phone", phoneService.getPhoneById(id));
         return "phone";
     }

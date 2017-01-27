@@ -24,8 +24,19 @@
                     <li><a href="#contact">Contact</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Dropdown <span class="caret"></span></a>
+                           aria-expanded="false">Reverse Routing <span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <!--/* The syntax is: TC short from ThymeleafController # methodName, and then argument list.*/-->
+                            <li><a th:href="${#mvc.url('TC#listPhones').build()}">Phones List</a></li>
+
+                            <li><a th:href="${#mvc.url('TC#editPhone').arg(0,25).build()}">Edit Phone 25</a></li>
+                            <!--/* SRESTC = SimpleRESTController */ -->
+                            <li><a th:href="${#mvc.url('SRESTC#sayHello').arg(0,'world').build()}">link</a></li>
+                            <!--/*
+                            Documentation: http://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html#building-uris-to-controllers
+                            Sample with multiple arguments.
+                            <a th:href="${#mvc.url('MSC#someControllerWithOtherArgs').arg(0,'argumentcach&eacute;').arg(1,'arg2').arg(2,'argumentthree').build()}">link</a>
+                            */-->
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
                             <li><a href="#">Something else here</a></li>
