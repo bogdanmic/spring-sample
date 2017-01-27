@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Thymeleaf MVC sample</title>
+
+    <!-- /* This code will be removed at thymeleaf parsing time!  */ -->
+    <!-- /* We added this conditional IE meta-data so that the IE browser ignores caching. */ -->
+    <!-- [if gt IE 8 ]>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <[endif]-->
+    <link rel="shortcut icon" type="image/png"
+          href="../../static/img/favicon.ico" th:href="@{/img/favicon.ico}"/>
+    <!-- add vendor dependencies -->
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../static/lib/bootstrap/dist/css/bootstrap.min.css"
+          th:href="@{/lib/bootstrap/dist/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../static/lib/bootstrap/dist/css/bootstrap-theme.min.css"
+          th:href="@{/lib/bootstrap/dist/css/bootstrap-theme.min.css}"/>
+
+    <script type="text/javascript"
+            src="../../static/lib/jquery/dist/jquery.min.js" th:src="@{/lib/jquery/dist/jquery.min.js}"></script>
+    <script type="text/javascript"
+            src="../../static/lib/bootstrap/dist/js/bootstrap.min.js" th:src="@{/lib/bootstrap/dist/js/bootstrap.min.js}"></script>
+    <!-- add our dependencies -->
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../static/css/main.css" th:href="@{/css/main.css}"/>
+    <script type="text/javascript"
+            src="../../static/js/main.js" th:src="@{/js/main.js}"></script>
+</head>
+<body>
+
+</body>
+</html>

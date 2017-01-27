@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/head::head"></head>
+<body>
+<header th:include="fragments/headers::header"></header>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Review</th>
+                </tr>
+                </thead>
+                <tbody>
+                <div th:each="phone,iterStat : ${phones}" th:remove="tag">
+                    <tr th:replace="fragments/phone::phone-tr (count=${iterStat.count},phone=${phone})"></tr>
+                </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer th:replace="fragments/headers::footer"></footer>
+</body>
+</html>

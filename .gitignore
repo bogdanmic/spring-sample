@@ -31,3 +31,6 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+
+# Bower ignore files
+src/main/resources/static/lib
