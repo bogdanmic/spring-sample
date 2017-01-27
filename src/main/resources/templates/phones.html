@@ -3,13 +3,30 @@
 <head th:include="fragments/head::head"></head>
 <body>
 <header th:include="fragments/headers::header"></header>
-<div class="container-fluid">
-    <div th:each="phone : ${phones}">
-        <p th:text="${phone.id}">Onions</p>
-        <p th:text="${phone.name}">2.41</p>
-        <p th:text="${phone.review}">yes</p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Review</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="phone,iterStat : ${phones}">
+                    <td th:text="${iterStat.count}"></td>
+                    <td th:text="${phone.id}"></td>
+                    <td th:text="${phone.name}"></td>
+                    <td th:text="${phone.review}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
-<footer th:include="fragments/headers::footer"></footer>
+<footer th:replace="fragments/headers::footer"></footer>
 </body>
 </html>
