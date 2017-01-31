@@ -12,6 +12,7 @@ DONE:
  - Spring Cache example (with EHCache3)
  - MVC with Thymeleaf example (Thymeleaf reverse routing included)
  - Custom Application event example
+ - Send Email example (as text or as Thymeleaf template)
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
@@ -24,7 +25,6 @@ TODO:
  - consul discovery
  - cloud tracing with zpikin and sleuth
  - batch and schedule example
- - mail example
  - spring integration example. communicate between REST services. etc
  - kafka microservices message bus (stream kafka)
  - akka actor example
