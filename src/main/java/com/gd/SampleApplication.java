@@ -1,6 +1,7 @@
 package com.gd;
 
 import com.gd.components.HelloBean;
+import com.gd.services.MailClientService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -26,6 +27,12 @@ public class SampleApplication {
         logger.warn("-->Using Bean {} to sayHello()", bean.getClass().getName());
         System.out.println(bean.sayHello());
         logger.error("-->Bean sayHello() returned:{}", bean.sayHello());
+
+        logger.info("-->Looking for Spring Bean '{}' in application context.", MailClientService.class);
+        // Get a bean from the application context.
+        MailClientService mailBean = ctx.getBean(MailClientService.class);
+        mailBean.prepareAndSend("sendTo@domain.com","springboot test");
+
 
         logger.debug("-->END Application!!!");
     }
