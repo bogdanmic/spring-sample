@@ -13,10 +13,12 @@ DONE:
  - MVC with Thymeleaf example (Thymeleaf reverse routing included)
  - Custom Application event example
  - Send Email example (as text or as Thymeleaf template)
+ - Schedule and Batch Job examples
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
  - security example
+ - multiple config files instead of a huge one.
  - REST services docs. built in or swagger.io
  - angular example
  - mongoDB example
@@ -24,7 +26,6 @@ TODO:
  - consul config
  - consul discovery
  - cloud tracing with zpikin and sleuth
- - batch and schedule example
  - spring integration example. communicate between REST services. etc
  - kafka microservices message bus (stream kafka)
  - akka actor example

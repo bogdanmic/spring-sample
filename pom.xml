@@ -126,6 +126,12 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         <!-- END: Email dependency -->
+        <!-- START: Spring batch dependency. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-batch</artifactId>
+        </dependency>
+        <!-- END: Spring batch dependency. -->
     </dependencies>
 
     <build>
