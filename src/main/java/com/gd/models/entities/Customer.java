@@ -17,7 +17,7 @@ public class Customer {
     private String lastName;
 
     // This constructor is used by the Customer Repository
-    protected Customer() {
+    public Customer() {
     }
 
     public Customer(String firstName, String lastName) {
@@ -35,6 +35,18 @@ public class Customer {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
