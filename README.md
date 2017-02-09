@@ -14,10 +14,10 @@ DONE:
  - Custom Application event example
  - Send Email example (as text or as Thymeleaf template)
  - Schedule and Batch Job examples
+ - Security example with db auth and encrypted password
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
- - security example
  - multiple config files instead of a huge one.
  - REST services docs. built in or swagger.io
  - angular example
