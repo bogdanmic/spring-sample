@@ -2,11 +2,13 @@ package com.gd.controllers;
 
 import com.gd.services.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 
 @Controller
 public class ThymeleafController {
@@ -17,6 +19,7 @@ public class ThymeleafController {
         this.phoneService = phoneService;
     }
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @RequestMapping(value = "/mvc", method = RequestMethod.GET)
     public String listPhones(Model model) {
         model.addAttribute("phones", phoneService.listPhones());
