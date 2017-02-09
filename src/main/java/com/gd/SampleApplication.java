@@ -1,6 +1,7 @@
 package com.gd;
 
 import com.gd.components.HelloBean;
+import com.gd.services.ConstantsService;
 import com.gd.services.MailClientService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,8 +32,13 @@ public class SampleApplication {
         logger.info("-->Looking for Spring Bean '{}' in application context.", MailClientService.class);
         // Get a bean from the application context.
         MailClientService mailBean = ctx.getBean(MailClientService.class);
-        mailBean.prepareAndSend("sendTo@domain.com","springboot test");
+        mailBean.prepareAndSend("sendTo@domain.com", "springboot test");
 
+        logger.info("-->Looking for Spring Bean '{}' in application context.", ConstantsService.class);
+        // Get a bean from the application context.
+        ConstantsService constantsService = ctx.getBean(ConstantsService.class);
+        logger.info("-->The Spring Bean '{}' has these values: {}, {}, {}.", ConstantsService.class,
+                constantsService.CONFIG_A, constantsService.CONFIG_B, constantsService.CONFIG_C);
 
         logger.debug("-->END Application!!!");
     }

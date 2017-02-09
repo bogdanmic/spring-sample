@@ -15,10 +15,10 @@ DONE:
  - Send Email example (as text or as Thymeleaf template)
  - Schedule and Batch Job examples
  - Security example with db auth and encrypted password
+ - Load configuration values from a custom properties file.
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
- - multiple config files instead of a huge one.
  - REST services docs. built in or swagger.io
  - angular example
  - mongoDB example
