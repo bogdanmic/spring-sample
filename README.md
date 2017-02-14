@@ -16,11 +16,11 @@ DONE:
  - Schedule and Batch Job examples
  - Security example with db auth and encrypted password
  - Load configuration values from a custom properties file.
+ - REST controller generated docs with swagger.io available at http://localhost:8080/swagger-ui.html
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
- - REST services docs. built in or swagger.io
- - angular example
+ - angular example (with jwt?)
  - mongoDB example
  - elasticsearch example
  - consul config
