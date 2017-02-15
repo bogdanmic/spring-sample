@@ -17,6 +17,7 @@ DONE:
  - Security example with db auth and encrypted password
  - Load configuration values from a custom properties file.
  - REST controller generated docs with swagger.io available at http://localhost:8080/swagger-ui.html
+ - Akka actors example
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
@@ -28,7 +29,6 @@ TODO:
  - cloud tracing with zpikin and sleuth
  - spring integration example. communicate between REST services. etc
  - kafka microservices message bus (stream kafka)
- - akka actor example
  - deploy it as a docker image
  - config profiles
  
