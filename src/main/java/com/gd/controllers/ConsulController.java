@@ -43,6 +43,7 @@ public class ConsulController {
     Object getConsulConfig() {
         // The app reads configuration values from consul, if they are not found it uses the default ones in the config files.
         // It looks for the key inside config/sampleapp/ where sampleapp is the spring.application.name configuration
+        // You can configure in consul even application variables like server.port
         // See here: http://stackoverflow.com/questions/41756234/consul-key-value-pair-use-for-configuration-in-spring-boot
 
         // This variable should be refreshed if changed because we configured the watch option.
