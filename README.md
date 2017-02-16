@@ -18,14 +18,14 @@ DONE:
  - Load configuration values from a custom properties file.
  - REST controller generated docs with swagger.io available at http://localhost:8080/swagger-ui.html
  - Akka actors example
+ - Consul Discovery sample: the app registers itself into consul
+ - Consul Config sample: the app loads configuration from consul KV if available, ortherwise from the configuration files.
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
  - angular example (with jwt?)
  - mongoDB example
  - elasticsearch example
- - consul config
- - consul discovery
  - cloud tracing with zpikin and sleuth
  - spring integration example. communicate between REST services. etc
  - kafka microservices message bus (stream kafka)

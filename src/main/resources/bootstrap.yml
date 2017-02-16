@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    consul:
+      discovery:
+        enabled: false # We need this configuration here too because of some config bleeding in spring cloud consul
+        fail-fast: false # We need this configuration here too because of some config bleeding in spring cloud consul
+        catalog-services-watch-delay: 30
+      config:
+        enabled: false # We need this configuration here too because of some config bleeding in spring cloud consul
+        fail-fast: false # We need this configuration here too because of some config bleeding in spring cloud consul
+        watch:
+          enabled: true # This enables the app to watch for config changes in consul.
+          delay: 15000  # How often should the configs be refreshed
