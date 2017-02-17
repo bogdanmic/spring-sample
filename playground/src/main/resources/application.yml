@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: playgroundspringapp # Give a name for the app. THis will be used for the service name in consul registration.
+  cloud:
+    consul:
+      discovery:
+        enabled: false # Enable/ disable the service(app) registration to consul.
+        fail-fast: false # If consul is not reachable, the app doesn't crash
+        tags: springapp, sampleapp, foo, bar # Tags for our service
+        # Making the Consul Instance ID Unique
+        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        health-check-interval: 15s # How often should consul access the health check endpoint "/health"
+      config:
+        enabled: false # Enable/ disable the service(app) registration to consul.
+        fail-fast: false # If consul is not reachable, the app doesn't crash
+        watch:
+          enabled: true # This enables the app to watch for config changes in consul.
+          delay: 15000  # How often should the configs be refreshed

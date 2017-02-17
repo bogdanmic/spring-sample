@@ -34,4 +34,4 @@ buildNumber.properties
 .mvn
 
 # Bower ignore files
-src/main/resources/static/lib
+playground/src/main/resources/static/lib
