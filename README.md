@@ -2,6 +2,14 @@ Spring Playground - The Plan
 -
 The Plan is to have them all in the same project just to see how they work together. If we create a project to demonstrate each of them then we won't know if they work and how they work together.
 
+Even though we started with one project to contain all, there is a need to try multiple approaches or tools. The said tools resolve the same problem in different ways and there is no need to have them both in the same project.
+So for this porpose we created multiple projects, and they are:
+ - JWT - a spring boot sample with JWT example 
+ - PlayGround - this is the initial project that will try to follow the plan bellow.
+ 
+
+### Playground Plan
+
 DONE:
  - AOP example
  - CRUD example
