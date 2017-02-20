@@ -28,16 +28,19 @@ public class TokenAuthenticationService {
         Date now = new Date();
         Date expiration = new Date(System.currentTimeMillis() + EXPIRATIONTIME);
 
-        String encodedSecret = Base64.getEncoder().encodeToString(secret.getBytes());
         // We generate a token now.
         String JWT = Jwts.builder()
                 .setId(UUID.randomUUID().toString())
                 .setSubject(username)
                 .setIssuedAt(now)
                 .setExpiration(expiration)
-                .signWith(SignatureAlgorithm.HS512, encodedSecret)
+                .signWith(SignatureAlgorithm.HS512, getEncodedSecret())
                 .compact();
-        response.addHeader(headerString, tokenPrefix + " " + JWT);
+        response.addHeader(headerString, JWT);
+    }
+
+    private String getEncodedSecret() {
+        return Base64.getEncoder().encodeToString(secret.getBytes());
     }
 
     public Authentication getAuthentication(HttpServletRequest request) {
@@ -45,7 +48,7 @@ public class TokenAuthenticationService {
         if (token != null) {
             // parse the token.
             String username = Jwts.parser()
-                    .setSigningKey(secret)
+                    .setSigningKey(getEncodedSecret())
                     .parseClaimsJws(token)
                     .getBody()
                     .getSubject();
