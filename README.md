@@ -7,6 +7,10 @@ So for this porpose we created multiple projects, and they are:
  - JWT - a spring boot sample with JWT example 
  - PlayGround - this is the initial project that will try to follow the plan bellow.
  
+### JWT
+
+DONE:
+ - Angular and Spring Boot Jwt authentication.
 
 ### Playground Plan
 
@@ -31,7 +35,6 @@ DONE:
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
- - angular example (with jwt?)
  - mongoDB example
  - elasticsearch example
  - cloud tracing with zpikin and sleuth

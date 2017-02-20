@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Spring Security JWT Example </title>
+
+    <!-- /* This code will be removed at thymeleaf parsing time!  */ -->
+    <!-- /* We added this conditional IE meta-data so that the IE browser ignores caching. */ -->
+    <!-- [if gt IE 8 ]>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <[endif]-->
+    <link rel="shortcut icon" type="image/png"
+          href="../../static/img/favicon.ico" th:href="@{/img/favicon.ico}"/>
+    <!-- add vendor dependencies -->
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../static/lib/bootstrap/dist/css/bootstrap.min.css"
+          th:href="@{/lib/bootstrap/dist/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../static/lib/bootstrap/dist/css/bootstrap-theme.min.css"
+          th:href="@{/lib/bootstrap/dist/css/bootstrap-theme.min.css}"/>
+
+    <script type="text/javascript"
+            src="../../static/lib/jquery/dist/jquery.min.js" th:src="@{/lib/jquery/dist/jquery.min.js}"></script>
+    <script type="text/javascript"
+            src="../../static/lib/bootstrap/dist/js/bootstrap.min.js"
+            th:src="@{/lib/bootstrap/dist/js/bootstrap.min.js}"></script>
+
+    <script type="text/javascript"
+            src="../../static/lib/angular/angular.min.js" th:src="@{/lib/angular/angular.min.js}"></script>
+    <!-- add our dependencies -->
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../static/css/main.css" th:href="@{/css/main.css}"/>
+    <script type="text/javascript"
+            src="../../static/js/main.js" th:src="@{/js/main.js}"></script>
+</head>
+<body>
+<div class="content-wrapper" ng-app="App" ng-controller="AppController" ng-strict-di="true">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Username</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username: admin"
+                               ng-model="credentials.username"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                               placeholder="Password: 123456" ng-model="credentials.password"/>
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="doSubmit(credentials)">Submit</button>
+                </form>
+                <pre>{{response}}</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
