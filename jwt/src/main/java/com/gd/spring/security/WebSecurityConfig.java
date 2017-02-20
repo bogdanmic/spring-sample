@@ -23,6 +23,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable() // disable csrf for our requests.
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
+                .antMatchers("/favicon.ico").permitAll()
+                .antMatchers("/img/**").permitAll()
+                .antMatchers("/css/**").permitAll()
+                .antMatchers("/js/**").permitAll()
+                .antMatchers("/lib/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
