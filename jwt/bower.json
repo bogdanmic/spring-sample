@@ -1,0 +1,26 @@
+{
+  "name": "jwt",
+  "homepage": "https://github.com/bogdanmic/spring-sample",
+  "authors": [
+    "Bogdan Mic <bogdan@21stclub.com>"
+  ],
+  "description": "Spring framework jwt",
+  "main": "",
+  "keywords": [
+    "spring",
+    "boot"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/resources/static/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.2"
+  }
+}
