@@ -10,11 +10,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.ApplicationContext;
+import org.springframework.scheduling.annotation.AsyncConfigurerSupport;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+
+import java.util.concurrent.Executor;
 
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableCaching
-public class PlaygroundApplication {
+@EnableAsync
+public class PlaygroundApplication extends AsyncConfigurerSupport {
 	private static final Logger logger = LoggerFactory.getLogger(PlaygroundApplication.class);
 	public static void main(String[] args) {
 		logger.debug("-->START Application!!!");
@@ -41,5 +47,16 @@ public class PlaygroundApplication {
 				constantsService.CONFIG_A, constantsService.CONFIG_B, constantsService.CONFIG_C);
 
 		logger.debug("-->END Application!!!");
+	}
+
+	@Override
+	public Executor getAsyncExecutor() {
+		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+		executor.setCorePoolSize(2);
+		executor.setMaxPoolSize(2);
+		executor.setQueueCapacity(500);
+		executor.setThreadNamePrefix("GithubLookup-");
+		executor.initialize();
+		return executor;
 	}
 }
