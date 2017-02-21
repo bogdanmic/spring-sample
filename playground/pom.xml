@@ -171,6 +171,10 @@
 			<version>1.1.2.RELEASE</version>
 		</dependency>
 		<!-- END: Consul discovery dependency -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
