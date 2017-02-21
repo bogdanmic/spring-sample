@@ -32,6 +32,7 @@ DONE:
  - Akka actors example
  - Consul Discovery sample: the app registers itself into consul
  - Consul Config sample: the app loads configuration from consul KV if available, ortherwise from the configuration files.
+ - Async method sample with REST template
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
