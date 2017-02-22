@@ -56,6 +56,12 @@
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 		<!-- END: Add the hystrix dependency -->
+		<!-- START: Hystrix dashboard dependency that allows us to see the circuit breaker status -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+		</dependency>
+		<!-- END: Hystrix dashboard dependency that allows us to see the circuit breaker status -->
 	</dependencies>
 
 	<dependencyManagement>
