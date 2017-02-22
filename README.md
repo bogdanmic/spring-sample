@@ -6,11 +6,18 @@ Even though we started with one project to contain all, there is a need to try m
 So for this porpose we created multiple projects, and they are:
  - JWT - a spring boot sample with JWT example 
  - PlayGround - this is the initial project that will try to follow the plan bellow.
+ - NetFlix Stack - a spring boot sample that uses some of the netflix tools: eureka, histrix, etc.
  
 ### JWT
 
 DONE:
  - Angular and Spring Boot Jwt authentication.
+ 
+### Netflix Stack
+ 
+DONE:
+ - Eureka Server - a sample project that acts as an Eureka server where other services can register
+ - Eureka Client - a sample project that registers to an eureka server and offers an endpoint to search for available services by name
 
 ### Playground Plan
 
