@@ -6,7 +6,7 @@ Even though we started with one project to contain all, there is a need to try m
 So for this porpose we created multiple projects, and they are:
  - JWT - a spring boot sample with JWT example 
  - PlayGround - this is the initial project that will try to follow the plan bellow.
- - NetFlix Stack - a spring boot sample that uses some of the netflix tools: eureka, histrix, etc.
+ - Netflix Stack - a spring boot sample that uses some of the netflix tools: eureka, histrix, etc.
  
 ### JWT
 
@@ -18,6 +18,7 @@ DONE:
 DONE:
  - Eureka Server - a sample project that acts as an Eureka server where other services can register
  - Eureka Client - a sample project that registers to an eureka server and offers an endpoint to search for available services by name
+ - Circuit Breaker - a sample project using hystrix as a circuit breaker. We fetch the services available from the circuit-breaker app using the eureka-client endpoint. If that fails we fallback to another method using histryx. We also have a dashboard to watch the hystrix.stream
 
 ### Playground Plan
 
