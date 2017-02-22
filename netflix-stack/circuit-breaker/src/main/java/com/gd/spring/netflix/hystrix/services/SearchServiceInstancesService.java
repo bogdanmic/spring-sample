@@ -1,5 +1,8 @@
 package com.gd.spring.netflix.hystrix.services;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -13,9 +16,12 @@ import java.util.List;
 @Service
 public class SearchServiceInstancesService {
 
+    private static final Logger logger = LoggerFactory.getLogger(SearchServiceInstancesService.class);
+
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @HystrixCommand(fallbackMethod = "reliable")
     public List<ServiceInstance> searchServiceInstancesByApplicationName(String applicationName) {
         // Fetch the eureka-client service instance. It has the name:
         List<ServiceInstance> instances = this.discoveryClient.getInstances("a-bootiful-client");
@@ -29,6 +35,11 @@ public class SearchServiceInstancesService {
 
             return restTemplate.getForObject(uri, List.class);
         }
+        return Collections.emptyList();
+    }
+
+    public List<ServiceInstance> reliable(String applicationName) {
+        logger.warn("--->>> Hystrix Circuit breaker: Fallback to the reliable method!!!");
         return Collections.emptyList();
     }
 }
