@@ -50,6 +50,12 @@
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- START: Add the hystrix dependency -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+		<!-- END: Add the hystrix dependency -->
 	</dependencies>
 
 	<dependencyManagement>
