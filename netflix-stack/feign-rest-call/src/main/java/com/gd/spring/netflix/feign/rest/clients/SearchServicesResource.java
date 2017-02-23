@@ -11,12 +11,14 @@ import java.util.List;
 /**
  * Here we can add a URL or a name. If we add a name then Feign will look for an service instance with that name
  * on eureka server.
+ * More details at: https://blog.de-swaef.eu/the-netflix-stack-using-spring-boot-part-3-feign/
  */
-@FeignClient(name = "a-bootiful-client")
+@FeignClient(name = "a-bootiful-client", fallback = SearchServicesResourceImpl.class)
 public interface SearchServicesResource {
 
     /**
      * To be able to use path parameters we need to also add the name field, otherwise it fails.
+     *
      * @param applicationName
      * @return
      */
