@@ -12,7 +12,12 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @EnableHystrixDashboard
 public class CircuitBreakerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CircuitBreakerApplication.class, args);
-	}
+    /**
+     * See more at: https://spring.io/guides/gs/circuit-breaker/
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(CircuitBreakerApplication.class, args);
+    }
 }
