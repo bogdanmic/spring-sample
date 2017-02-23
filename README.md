@@ -21,6 +21,7 @@ DONE:
  - Circuit Breaker - a sample project using hystrix as a circuit breaker. We fetch the services available from the circuit-breaker app using the eureka-client endpoint. If that fails we fallback to another method using histryx. We also have a dashboard to watch the hystrix.stream
  - Feign Rest Call - a sample project that uses Feign clients to make a rest call to a service registered with our Eureka server. If no service is found or the call fails, we use a fallback.
  - REST service calls - In **Circuit Breaker** we use a REST Template to make a rest call and in **Feign Rest Call** we use a Feign Client for that.
+ - Turbine Monitor - It's a project that aggregates all **hystryx.stream**s for a given cluster service name (our HYSTRIX-CIRCUIT-BREAKER service) under one roof.
 
 ### Playground Plan
 
@@ -48,7 +49,7 @@ TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
  - mongoDB example
  - elasticsearch example
- - cloud tracing with zpikin and sleuth
+ - cloud tracing with zpikin and sleuth - https://github.com/Qkyrie/spring-boot-netflix-example/branches
  - spring integration example ???
  - kafka microservices message bus (stream kafka)
  - deploy it as a docker image
