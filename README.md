@@ -48,7 +48,7 @@ TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
  - mongoDB example
  - elasticsearch example
- - cloud tracing with zpikin and sleuth
+ - cloud tracing with zpikin and sleuth - https://github.com/Qkyrie/spring-boot-netflix-example/branches
  - spring integration example ???
  - kafka microservices message bus (stream kafka)
  - deploy it as a docker image
