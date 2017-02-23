@@ -3,7 +3,7 @@ Spring Playground - The Plan
 The Plan is to have them all in the same project just to see how they work together. If we create a project to demonstrate each of them then we won't know if they work and how they work together.
 
 Even though we started with one project to contain all, there is a need to try multiple approaches or tools. The said tools resolve the same problem in different ways and there is no need to have them both in the same project.
-So for this porpose we created multiple projects, and they are:
+So for this purpose we created multiple projects, and they are:
  - JWT - a spring boot sample with JWT example 
  - PlayGround - this is the initial project that will try to follow the plan bellow.
  - Netflix Stack - a spring boot sample that uses some of the netflix tools: eureka, histrix, etc.
@@ -19,6 +19,8 @@ DONE:
  - Eureka Server - a sample project that acts as an Eureka server where other services can register
  - Eureka Client - a sample project that registers to an eureka server and offers an endpoint to search for available services by name
  - Circuit Breaker - a sample project using hystrix as a circuit breaker. We fetch the services available from the circuit-breaker app using the eureka-client endpoint. If that fails we fallback to another method using histryx. We also have a dashboard to watch the hystrix.stream
+ - Feign Rest Call - a sample project that uses Feign clients to make a rest call to a service registered with our Eureka server. If no service is found or the call fails, we use a fallback.
+ - REST service calls - In **Circuit Breaker** we use a REST Template to make a rest call and in **Feign Rest Call** we use a Feign Client for that.
 
 ### Playground Plan
 
@@ -47,7 +49,7 @@ TODO:
  - mongoDB example
  - elasticsearch example
  - cloud tracing with zpikin and sleuth
- - spring integration example. communicate between REST services. etc
+ - spring integration example ???
  - kafka microservices message bus (stream kafka)
  - deploy it as a docker image
  - config profiles
