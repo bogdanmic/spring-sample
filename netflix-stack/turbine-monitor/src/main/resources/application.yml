@@ -1,0 +1,4 @@
+turbine:
+  aggregator:
+    clusterConfig: HYSTRIX-CIRCUIT-BREAKER
+  appConfig: HYSTRIX-CIRCUIT-BREAKER
