@@ -1,5 +1,6 @@
 package com.gd.spring.netflix.eureka.controllers;
 
+import com.gd.spring.netflix.eureka.dtos.InstanceDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 public class ServiceInstanceRestController {
@@ -18,5 +20,13 @@ public class ServiceInstanceRestController {
     public List<ServiceInstance> serviceInstancesByApplicationName(
             @PathVariable String applicationName) {
         return this.discoveryClient.getInstances(applicationName);
+    }
+
+    @RequestMapping("/search-service-instances/{applicationName}")
+    public List<InstanceDTO> searchServiceInstancesByApplicationName(
+            @PathVariable String applicationName) {
+        return this.discoveryClient.getInstances(applicationName).stream()
+                .map(i-> new InstanceDTO(i.getUri().toASCIIString(),i.getHost(),i.getServiceId()))
+                .collect(Collectors.toList());
     }
 }
