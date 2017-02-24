@@ -50,6 +50,12 @@
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- START: Dependency to allow us to manage log levels and interact with JMX beans from spring boot admin. The logback.xml is needed too -->
+		<dependency>
+			<groupId>org.jolokia</groupId>
+			<artifactId>jolokia-core</artifactId>
+		</dependency>
+		<!-- END: Dependency to allow us to manage log levels and interact with JMX beans from spring boot admin. The logback.xml is needed too -->
 	</dependencies>
 
 	<dependencyManagement>
