@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.gd.spring.netflix.eureka</groupId>
-	<artifactId>eureka-client</artifactId>
+	<groupId>com.gd.spring.admin</groupId>
+	<artifactId>boot-admin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eureka-client</name>
+	<name>boot-admin</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -45,17 +45,18 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
+		<!-- START: Add spring boot admin server dependency to the project -->
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
-			<scope>test</scope>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server</artifactId>
+			<version>1.4.6</version>
 		</dependency>
-		<!-- START: Dependency to allow us to manage log levels and interact with JMX beans from spring boot admin. The logback.xml is needed too -->
 		<dependency>
-			<groupId>org.jolokia</groupId>
-			<artifactId>jolokia-core</artifactId>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server-ui</artifactId>
+			<version>1.4.6</version>
 		</dependency>
-		<!-- END: Dependency to allow us to manage log levels and interact with JMX beans from spring boot admin. The logback.xml is needed too -->
+		<!-- END: Add spring boot admin dependency to the project -->
 	</dependencies>
 
 	<dependencyManagement>
@@ -78,5 +79,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>

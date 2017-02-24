@@ -54,4 +54,5 @@ TODO:
  - kafka microservices message bus (stream kafka)
  - deploy it as a docker image
  - config profiles
+ - spring cloud config
  
