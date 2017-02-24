@@ -45,6 +45,18 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
+		<!-- START: Add spring boot admin server dependency to the project -->
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server</artifactId>
+			<version>1.4.6</version>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server-ui</artifactId>
+			<version>1.4.6</version>
+		</dependency>
+		<!-- END: Add spring boot admin dependency to the project -->
 	</dependencies>
 
 	<dependencyManagement>
