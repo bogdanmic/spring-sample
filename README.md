@@ -22,6 +22,7 @@ DONE:
  - Feign Rest Call - a sample project that uses Feign clients to make a rest call to a service registered with our Eureka server. If no service is found or the call fails, we use a fallback.
  - REST service calls - In **Circuit Breaker** we use a REST Template to make a rest call and in **Feign Rest Call** we use a Feign Client for that.
  - Turbine Monitor - It's a project that aggregates all **hystryx.stream**s for a given cluster service name (our HYSTRIX-CIRCUIT-BREAKER service) under one roof.
+ - Spring Boot Admin - Although this is not build by netflix, I added it as a sample project too see it's capabilities. It can use actuator endpoints to provide an overview of all your services registered into Eureka server and other stuff.
 
 ### Playground Plan
 
