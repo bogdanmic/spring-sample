@@ -19,7 +19,7 @@ angular.module('hello', ['ngRoute'])
     })
     .controller('home', function ($http) {
         var self = this;
-        $http.get('http://localhost:9000/').then(function(response) {
+        $http.get('http://localhost:9000/resource').then(function(response) {
             self.greeting = response.data;
         });
     })
