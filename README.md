@@ -7,6 +7,7 @@ So for this purpose we created multiple projects, and they are:
  - JWT - a spring boot sample with JWT example 
  - PlayGround - this is the initial project that will try to follow the plan bellow.
  - Netflix Stack - a spring boot sample that uses some of the netflix tools: eureka, histrix, etc.
+ - Oauth2 - for now this sample has two apps. A ui(single-page-app) app and a resource(resource-server) app. We use session sharing within **redis** among the apps. THe UI app authenticates the user and creates the session and passes the sessionId as an auth token to the resources app. 
  
 ### JWT
 
@@ -23,6 +24,11 @@ DONE:
  - REST service calls - In **Circuit Breaker** we use a REST Template to make a rest call and in **Feign Rest Call** we use a Feign Client for that.
  - Turbine Monitor - It's a project that aggregates all **hystryx.stream**s for a given cluster service name (our HYSTRIX-CIRCUIT-BREAKER service) under one roof.
  - Spring Boot Admin - Although this is not build by netflix, I added it as a sample project too see it's capabilities. It can use actuator endpoints to provide an overview of all your services registered into Eureka server and other stuff.
+
+### Oauth2 Sample
+
+DONE:
+ - Session sharing with Redis in two apps. Use the sessionId as an auth token.(Tag: session_sharing_redis)
 
 ### Playground Plan
 
@@ -51,7 +57,7 @@ TODO:
  - mongoDB example
  - elasticsearch example
  - cloud tracing with zpikin and sleuth - https://github.com/Qkyrie/spring-boot-netflix-example/branches
- - spring integration example ???
+ - spring integration example ??? (https://spring.io/guides/gs/integration/)
  - kafka microservices message bus (stream kafka)
  - deploy it as a docker image
  - config profiles
