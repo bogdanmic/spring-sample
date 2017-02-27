@@ -29,7 +29,8 @@ DONE:
 
 DONE:
  - Session sharing with Redis in two apps. Use the sessionId as an auth token.(Tag: [session_sharing_redis](https://github.com/bogdanmic/spring-sample/releases/tag/session_sharing_redis))
- - Simple SSO server with oauth2 (Tag: [simple_sso_oauth2]()})
+ - Simple SSO server with oauth2 (Tag: [simple_sso_oauth2](https://github.com/bogdanmic/spring-sample/releases/tag/simple_sso_oauth2))
+ - Gateway Sample - We have a gateway that uses Zuul proxy to serve us the UI of an Admin app or the UI of the Client app depending on the roles the user logged in has. We have a 3rd resource app that is also served through Zuul proxy, whos endpoints can be accessed depending on user roles too.
 
 ### Playground Plan
 

@@ -11,11 +11,18 @@ public class MessageDTO {
         this.content = content;
     }
 
+    public MessageDTO() {
+    }
+
     public String getId() {
         return id;
     }
 
     public String getContent() {
         return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
