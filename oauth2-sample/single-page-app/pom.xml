@@ -60,18 +60,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	<!-- START: Add Zuul proxy server dependency. Will allow the UI server to serve as a proxy -->
+		<!-- Dependencies for the gateway approach -->
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zuul</artifactId>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session</artifactId>
 		</dependency>
-		<!-- END: Add Zuul proxy server dependency. Will allow the UI server to serve as a proxy -->
-		<!-- START: Oauth2 dependency -->
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-oauth2</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-		<!-- END: Oauth2 dependency -->
 	</dependencies>
 
 	<build>
