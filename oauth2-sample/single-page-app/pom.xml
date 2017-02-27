@@ -60,22 +60,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- START: REDIS and Spring Session dependencies. We will use them to share session states -->
-		<dependency>
-			<groupId>org.springframework.session</groupId>
-			<artifactId>spring-session</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
-		</dependency>
-		<!-- END: REDIS and Spring Session dependencies. We will use them to share session states -->
-		<!-- START: Add Zuul proxy server dependency. Will allow the UI server to serve as a proxy -->
+	<!-- START: Add Zuul proxy server dependency. Will allow the UI server to serve as a proxy -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zuul</artifactId>
 		</dependency>
 		<!-- END: Add Zuul proxy server dependency. Will allow the UI server to serve as a proxy -->
+		<!-- START: Oauth2 dependency -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-oauth2</artifactId>
+		</dependency>
+		<!-- END: Oauth2 dependency -->
 	</dependencies>
 
 	<build>
