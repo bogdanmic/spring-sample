@@ -4,13 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ResourceServerApplication {
+public class AdminApplication {
 
 	/**
-	 * For more info: https://spring.io/guides/tutorials/spring-security-and-angular-js/
+	 * For more: https://spring.io/guides/tutorials/spring-security-and-angular-js/
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(ResourceServerApplication.class, args);
+		SpringApplication.run(AdminApplication.class, args);
 	}
 }
