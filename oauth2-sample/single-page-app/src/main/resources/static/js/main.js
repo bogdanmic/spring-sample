@@ -8,10 +8,6 @@ angular.module('hello', ['ngRoute'])
             templateUrl: 'templates/home.html',
             controller: 'home',
             controllerAs: 'controller'
-        }).when('/login', {
-            templateUrl: 'templates/login.html',
-            controller: 'navigation',
-            controllerAs: 'controller'
         }).otherwise('/');
 
         $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
@@ -21,7 +17,7 @@ angular.module('hello', ['ngRoute'])
         var self = this;
         $http.get('token').then(function(response) {
             $http({
-                url : 'http://localhost:9000/resource',
+                url : '/resource',
                 method : 'GET',
                 headers : {
                     'X-Auth-Token' : response.data.token
@@ -58,17 +54,6 @@ angular.module('hello', ['ngRoute'])
 
         authenticate();
         self.credentials = {};
-        self.login = function () {
-            authenticate(self.credentials, function () {
-                if ($rootScope.authenticated) {
-                    $location.path("/");
-                    self.error = false;
-                } else {
-                    $location.path("/login");
-                    self.error = true;
-                }
-            });
-        };
 
         self.logout = function () {
             $http.post('logout', {}).finally(function () {
