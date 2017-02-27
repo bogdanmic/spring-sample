@@ -14,5 +14,9 @@
     "src/main/resources/static/lib",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "^1.6.2",
+    "bootstrap": "^3.3.7"
+  }
 }
