@@ -21,7 +21,7 @@ angular.module('hello', ['ngRoute'])
         var self = this;
         $http.get('token').then(function(response) {
             $http({
-                url : 'http://localhost:9000/resource',
+                url : '/resource',
                 method : 'GET',
                 headers : {
                     'X-Auth-Token' : response.data.token

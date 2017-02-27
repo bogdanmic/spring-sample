@@ -1,0 +1,6 @@
+zuul:
+  routes:
+    resource:
+      path: /resource/**
+      url: http://localhost:9000
+      sensitive-headers:
