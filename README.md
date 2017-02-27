@@ -28,7 +28,7 @@ DONE:
 ### Oauth2 Sample
 
 DONE:
- - Session sharing with Redis in two apps. Use the sessionId as an auth token.(Tag: session_sharing_redis)
+ - Session sharing with Redis in two apps. Use the sessionId as an auth token.(Tag: [session_sharing_redis](https://github.com/bogdanmic/spring-sample/releases/tag/session_sharing_redis))
 
 ### Playground Plan
 
