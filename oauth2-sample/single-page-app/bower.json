@@ -1,0 +1,18 @@
+{
+  "name": "single-page-app",
+  "homepage": "https://github.com/bogdanmic/spring-sample",
+  "authors": [
+    "Bogdan Mic <bogdan@21stclub.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/resources/static/lib",
+    "test",
+    "tests"
+  ]
+}
