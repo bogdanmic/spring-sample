@@ -51,7 +51,7 @@ TODO:
  - mongoDB example
  - elasticsearch example
  - cloud tracing with zpikin and sleuth - https://github.com/Qkyrie/spring-boot-netflix-example/branches
- - spring integration example ???
+ - spring integration example ??? (https://spring.io/guides/gs/integration/)
  - kafka microservices message bus (stream kafka)
  - deploy it as a docker image
  - config profiles
