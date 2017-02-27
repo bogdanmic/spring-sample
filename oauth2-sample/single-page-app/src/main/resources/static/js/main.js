@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('hello', [])
-    .controller('home', function ($scope) {
-        $scope.greeting = {id: 'xxx', content: 'Hello World!'}
+    .controller('home', function () {
+        this.greeting = {id: 'xxx', content: 'Hello World!'}
     });
