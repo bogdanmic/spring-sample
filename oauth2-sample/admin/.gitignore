@@ -22,3 +22,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+
+# Bower ignore files
+src/main/resources/static/lib
