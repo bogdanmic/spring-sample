@@ -67,4 +67,6 @@ TODO:
  - netflix archaius https://github.com/Netflix/archaius
  - netflix spectator, servo and atlas http://cloud.spring.io/spring-cloud-static/spring-cloud.html#netflix-metrics
  - spring boot cloud cli http://cloud.spring.io/spring-cloud-static/spring-cloud.html#_spring_boot_cloud_cli
+ - spring cloud aws ???
+ - spring cloud data flow ???
  
