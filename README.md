@@ -69,4 +69,4 @@ TODO:
  - spring boot cloud cli http://cloud.spring.io/spring-cloud-static/spring-cloud.html#_spring_boot_cloud_cli
  - spring cloud aws ???
  - spring cloud data flow ???
- 
+ - lombok dependency ???
