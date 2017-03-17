@@ -70,3 +70,4 @@ TODO:
  - spring cloud aws ???
  - spring cloud data flow ???
  - lombok dependency ???
+ - vault secrets ??? https://spring.io/blog/2016/06/24/managing-secrets-with-vault
