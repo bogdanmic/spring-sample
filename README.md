@@ -71,3 +71,4 @@ TODO:
  - spring cloud data flow ???
  - lombok dependency ???
  - vault secrets ??? https://spring.io/blog/2016/06/24/managing-secrets-with-vault
+ - websockets/sockjs andsocket sample https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/websocket.html#websocket-fallback-sockjs-client https://github.com/sockjs/sockjs-client
