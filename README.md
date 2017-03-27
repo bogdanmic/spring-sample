@@ -54,6 +54,7 @@ DONE:
  - Consul Config sample: the app loads configuration from consul KV if available, ortherwise from the configuration files.
  - Async method sample with REST template
  - Lombok annotation library to lose some of the boilerplate code.
+ - Spring config profiles: Create your own **application-dev.yml** file with which you can overwrite config values from **application.yml**
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
@@ -63,7 +64,6 @@ TODO:
  - spring integration example ??? (https://spring.io/guides/gs/integration/)
  - kafka microservices message bus (stream kafka)
  - deploy it as a docker image
- - config profiles
  - spring cloud config
  - netflix archaius https://github.com/Netflix/archaius
  - netflix spectator, servo and atlas http://cloud.spring.io/spring-cloud-static/spring-cloud.html#netflix-metrics
