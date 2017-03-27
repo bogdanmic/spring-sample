@@ -1,7 +1,6 @@
 package com.gd.spring.services;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;
@@ -10,10 +9,10 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class MailClientService {
 
-    private static final Logger logger = LoggerFactory.getLogger(MailClientService.class);
     private JavaMailSender mailSender;
     private final MailContentBuilderService mailContentBuilder;
 
@@ -42,13 +41,13 @@ public class MailClientService {
         try {
             if (!mock) {
                 mailSender.send(messagePreparator);
-                logger.info("Mail SENT to {} with text: {}", recipient, message);
+                log.info("Mail SENT to {} with text: {}", recipient, message);
             } else {
-                logger.info("Mail SENT(mock) to {} with text: {}", recipient, message);
+                log.info("Mail SENT(mock) to {} with text: {}", recipient, message);
             }
         } catch (MailException e) {
             // runtime exception; compiler will not force you to handle it
-            logger.error("Mail FAILED to {} with text: {}.Exception: {}", recipient, message, e);
+            log.error("Mail FAILED to {} with text: {}.Exception: {}", recipient, message, e);
         }
     }
 

@@ -53,6 +53,7 @@ DONE:
  - Consul Discovery sample: the app registers itself into consul
  - Consul Config sample: the app loads configuration from consul KV if available, ortherwise from the configuration files.
  - Async method sample with REST template
+ - Lombok annotation library to lose some of the boilerplate code.
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
@@ -64,4 +65,10 @@ TODO:
  - deploy it as a docker image
  - config profiles
  - spring cloud config
- 
+ - netflix archaius https://github.com/Netflix/archaius
+ - netflix spectator, servo and atlas http://cloud.spring.io/spring-cloud-static/spring-cloud.html#netflix-metrics
+ - spring boot cloud cli http://cloud.spring.io/spring-cloud-static/spring-cloud.html#_spring_boot_cloud_cli
+ - spring cloud aws ???
+ - spring cloud data flow ???
+ - vault secrets ??? https://spring.io/blog/2016/06/24/managing-secrets-with-vault
+ - websockets/sockjs andsocket sample https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/websocket.html#websocket-fallback-sockjs-client https://github.com/sockjs/sockjs-client
