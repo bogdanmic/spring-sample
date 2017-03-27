@@ -175,6 +175,15 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
+
+		<!-- START: Lombok boiler plate helper dependency -->
+		<dependency>
+			<!-- Offers annotations to reduce boilerplate code -->
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- END: Lombok boiler plate helper dependency -->
 	</dependencies>
 
 	<build>
