@@ -16,3 +16,6 @@ spring:
         watch:
           enabled: true # This enables the app to watch for config changes in consul.
           delay: 15000  # How often should the configs be refreshed
+    # Active profile
+  profiles:
+    active: dev
