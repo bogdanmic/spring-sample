@@ -1,0 +1,3 @@
+# Use this file to overwrite configurations from application.yml in your development env.
+server:
+  port: 8989

@@ -35,3 +35,6 @@ buildNumber.properties
 
 # Bower ignore files
 src/main/resources/static/lib
+
+# Ignore dev profile config files
+*-dev.yml
