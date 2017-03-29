@@ -5,3 +5,14 @@ eureka.instance.prefer-ip-address: true
 # actuator endpoints so that they are accessible without authentication. Probably another solution would be to
 # configure the authentication on actuator and then configure the boot-admin app to use that.
 management.security.enabled: false
+
+# https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          # The uri to the git repository that holds the config files
+          uri: https://github.com/bogdanmic/spring-sample
+          # The path/folder where the server should look for configs
+          searchPaths: configs
