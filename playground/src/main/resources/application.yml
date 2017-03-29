@@ -19,3 +19,7 @@ spring:
     # Active profile
   profiles:
     active: dev
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
