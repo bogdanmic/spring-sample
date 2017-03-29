@@ -192,6 +192,13 @@
 		</dependency>
 		<!-- END: MongoDB dependency -->
 
+		<!-- START: Websokets dependency -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
+		<!-- END: Websokets dependency -->
+
 	</dependencies>
 
 	<build>

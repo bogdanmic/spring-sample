@@ -31,4 +31,9 @@ public class ThymeleafController {
         model.addAttribute("phone", phoneService.getPhoneById(id));
         return "phone";
     }
+
+    @RequestMapping("/websoket-client")
+    public String websoketClient(Model model) {
+        return "websoket-client";
+    }
 }

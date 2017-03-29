@@ -60,6 +60,7 @@ DONE:
  - Lombok annotation library to lose some of the boilerplate code.
  - Spring config profiles: Create your own **application-dev.yml** file with which you can overwrite config values from **application.yml**
  - MongoDb: CRUD operations on a mongodb collection.
+ - Websockets: Access the `/websoket-client` endpoint to see a simple sample with websocket communication
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
@@ -73,4 +74,3 @@ TODO:
  - spring cloud aws ???
  - spring cloud data flow ???
  - vault secrets ??? https://spring.io/blog/2016/06/24/managing-secrets-with-vault
- - websockets/sockjs andsocket sample https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/websocket.html#websocket-fallback-sockjs-client https://github.com/sockjs/sockjs-client
