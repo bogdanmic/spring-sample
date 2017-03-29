@@ -5,3 +5,15 @@ eureka.instance.prefer-ip-address: true
 # actuator endpoints so that they are accessible without authentication. Probably another solution would be to
 # configure the authentication on actuator and then configure the boot-admin app to use that.
 management.security.enabled: false
+
+spring:
+  data:
+    elasticsearch:
+      # For now it only works with elastic search version 2.X.X
+      # The latest version 5.X is not supported ... yet
+      # https://github.com/spring-projects/spring-data-elasticsearch
+      # https://github.com/spring-projects/spring-data-elasticsearch
+      cluster-name: "elasticsearch"
+      cluster-nodes: localhost:9300
+      # if spring data repository support is enabled
+      repositories.enabled: true
