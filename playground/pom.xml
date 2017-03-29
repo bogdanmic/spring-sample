@@ -192,6 +192,13 @@
 		</dependency>
 		<!-- END: MongoDB dependency -->
 
+		<!-- START: Elasticsearch dependency -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+		</dependency>
+		<!-- END: Elasticsearch dependency -->
+
 	</dependencies>
 
 	<build>
