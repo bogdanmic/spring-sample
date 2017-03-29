@@ -8,6 +8,12 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class WebsoketsController {
+    /**
+     * More details at: https://spring.io/guides/gs/messaging-stomp-websocket/
+     * @param message
+     * @return
+     * @throws Exception
+     */
     @MessageMapping("/hello")
     @SendTo("/topic/greetings")
     public SalutationsMessage greeting(HelloMessage message) throws Exception {
