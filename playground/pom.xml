@@ -184,6 +184,14 @@
 			<optional>true</optional>
 		</dependency>
 		<!-- END: Lombok boiler plate helper dependency -->
+
+		<!-- START: MongoDB dependency -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<!-- END: MongoDB dependency -->
+
 	</dependencies>
 
 	<build>
