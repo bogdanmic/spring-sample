@@ -50,6 +50,22 @@
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- START: MongoDB dependency -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-neo4j</artifactId>
+		</dependency>
+		<!-- END: MongoDB dependency -->
+
+		<!-- START: Lombok boiler plate helper dependency -->
+		<dependency>
+			<!-- Offers annotations to reduce boilerplate code -->
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- END: Lombok boiler plate helper dependency -->
 	</dependencies>
 
 	<dependencyManagement>

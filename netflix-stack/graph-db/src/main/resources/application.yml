@@ -5,3 +5,9 @@ eureka.instance.prefer-ip-address: true
 # actuator endpoints so that they are accessible without authentication. Probably another solution would be to
 # configure the authentication on actuator and then configure the boot-admin app to use that.
 management.security.enabled: false
+
+spring:
+  data:
+    neo4j:
+      username: neo4j
+      password: test
