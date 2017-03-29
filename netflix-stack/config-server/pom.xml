@@ -50,6 +50,12 @@
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- START: Spring cloud config server dependency -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+		<!-- END: Spring cloud config server dependency -->
 	</dependencies>
 
 	<dependencyManagement>
