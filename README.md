@@ -55,11 +55,12 @@ DONE:
  - Async method sample with REST template
  - Lombok annotation library to lose some of the boilerplate code.
  - Spring config profiles: Create your own **application-dev.yml** file with which you can overwrite config values from **application.yml**
+ - MongoDb: CRUD operations on a mongodb collection.
 
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
- - mongoDB example
  - elasticsearch example
+ - neo4j example
  - cloud tracing with zpikin and sleuth - https://github.com/Qkyrie/spring-boot-netflix-example/branches
  - spring integration example ??? (https://spring.io/guides/gs/integration/)
  - kafka microservices message bus (stream kafka)
