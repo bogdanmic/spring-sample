@@ -1,1 +1,14 @@
+# This name is used to discover configuration files by the server
+# Read more here: https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html#_quick_start
 spring.application.name: config-client-app
+
+# Active profile
+spring:
+  profiles:
+    active: dev
+
+spring.cloud.config.discovery:
+  # Enable the client to use service discovery to find the config server.
+  enabled: true
+  # Configure the config server name under which we can find it in the discovery service/server.
+  serviceId: config-server-app
