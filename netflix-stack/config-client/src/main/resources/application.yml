@@ -1,0 +1,7 @@
+server.port: 8865
+eureka.instance.prefer-ip-address: true
+
+# In order to watch metrics and other stats from this app into the boot-admin app we need to disable security for the
+# actuator endpoints so that they are accessible without authentication. Probably another solution would be to
+# configure the authentication on actuator and then configure the boot-admin app to use that.
+management.security.enabled: false
