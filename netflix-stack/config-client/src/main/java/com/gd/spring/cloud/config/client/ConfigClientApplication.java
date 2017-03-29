@@ -8,7 +8,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class ConfigClientApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ConfigClientApplication.class, args);
-	}
+    /**
+     * For more: https://spring.io/guides/gs/centralized-configuration/
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(ConfigClientApplication.class, args);
+    }
 }
