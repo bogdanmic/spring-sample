@@ -24,6 +24,7 @@ DONE:
  - REST service calls - In **Circuit Breaker** we use a REST Template to make a rest call and in **Feign Rest Call** we use a Feign Client for that.
  - Turbine Monitor - It's a project that aggregates all **hystryx.stream**s for a given cluster service name (our HYSTRIX-CIRCUIT-BREAKER service) under one roof.
  - Spring Boot Admin - Although this is not build by netflix, I added it as a sample project too see it's capabilities. It can use actuator endpoints to provide an overview of all your services registered into Eureka server and other stuff.
+ - Graph Db - Another technology that is not netflix relates. It's a sample that connects to a **neo4j** database, adds,updates and queries some data.
 
 ### Oauth2 Sample
 
@@ -60,7 +61,6 @@ DONE:
 TODO:
  - multiple DBs in a proper way not as it is now on the multi_db_v1 branch (maybe use multiple spring maven modules?)
  - elasticsearch example
- - neo4j example
  - cloud tracing with zpikin and sleuth - https://github.com/Qkyrie/spring-boot-netflix-example/branches
  - spring integration example ??? (https://spring.io/guides/gs/integration/)
  - kafka microservices message bus (stream kafka)
