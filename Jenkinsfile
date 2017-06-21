@@ -19,11 +19,6 @@ pipeline {
     stage('TEST') {
       steps {
         echo 'Another msg'
-        waitUntil() {
-          echo '111'
-          echo '2222'
-        }
-        
       }
     }
     stage('Final') {
