@@ -3,8 +3,20 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean install'
+        parallel(
+          "Build": {
+            sh 'mvn clean install'
+            
+          },
+          "Wait": {
+            sleep 3
+            
+          }
+        )
       }
     }
+  }
+  environment {
+    asdfa = 'asdfa'
   }
 }
