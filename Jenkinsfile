@@ -14,7 +14,7 @@ pipeline {
             
           },
           "Build": {
-            sh 'mvn clean install'
+            sh 'java -version'
             
           }
         )
