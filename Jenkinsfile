@@ -13,8 +13,12 @@ pipeline {
             echo 'tst2'
             
           },
-          "Build": {
+          "JavaV": {
             sh 'java -version'
+            
+          },
+          "Build": {
+            sh 'mvn clean install'
             
           }
         )
