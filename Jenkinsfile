@@ -12,6 +12,10 @@ pipeline {
           "Tst": {
             echo 'tst2'
             
+          },
+          "Build": {
+            sh 'mvn clean install'
+            
           }
         )
       }
