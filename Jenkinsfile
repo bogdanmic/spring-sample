@@ -42,14 +42,12 @@ def notifyBuild(String buildStatus = 'STARTED') {
 
     // Override default values based on build status
     if (buildStatus == 'STARTED') {
-        color = 'YELLOW'
-        colorCode = '#FFFF00'
+        // Here we can also use hexa values like #FF00FF and such
+        colorCode = 'warning'
     } else if (buildStatus == 'SUCCESSFUL') {
-        color = 'GREEN'
-        colorCode = '#00FF00'
+        colorCode = 'good'
     } else {
-        color = 'RED'
-        colorCode = '#FF0000'
+        colorCode = 'danger'
     }
 
     // Send notifications
