@@ -51,12 +51,12 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- START: MongoDB dependency -->
+		<!-- START: neo4j dependency -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-neo4j</artifactId>
 		</dependency>
-		<!-- END: MongoDB dependency -->
+		<!-- END: neo4j dependency -->
 
 		<!-- START: Lombok boiler plate helper dependency -->
 		<dependency>
