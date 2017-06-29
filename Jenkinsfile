@@ -2,13 +2,14 @@ pipeline {
     agent any
 
     stages {
-        notifyBuild('STARTED')
 
         stage('Checkout') {
             steps {
                 echo 'Checking out....'
                 checkout scm
                 slackSend(botUser: true, color: '#ff0000', message: 'Start build')
+                notifyBuild('STARTED')
+
             }
         }
         stage('Build') {
