@@ -1,9 +1,9 @@
 pipeline {
     agent any
+    try {
+        notifyBuild('STARTED')
+        stages {
 
-    stages {
-        try {
-            notifyBuild('STARTED')
 
             stage('Checkout') {
                 steps {
@@ -28,14 +28,15 @@ pipeline {
                     slackSend(color: '#ff0000', message: 'End build')
                 }
             }
-        } catch (e) {
-            // If there was an exception thrown, the build failed
-            currentBuild.result = "FAILED"
-            throw e
-        } finally {
-            // Success or failure, always send notifications
-            notifyBuild(currentBuild.result)
+
         }
+    } catch (e) {
+        // If there was an exception thrown, the build failed
+        currentBuild.result = "FAILED"
+        throw e
+    } finally {
+        // Success or failure, always send notifications
+        notifyBuild(currentBuild.result)
     }
 }
 
