@@ -7,7 +7,6 @@ pipeline {
             steps {
                 echo 'Checking out....'
                 checkout scm
-                slackSend(botUser: true, color: '#ff0000', message: 'Start build')
                 notifyBuild('STARTED')
 
             }
@@ -20,12 +19,12 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing....'
+                currentBuild.result = "FAILED"
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                slackSend(color: '#ff0000', message: 'End build')
                 notifyBuild(currentBuild.result)
 
             }
