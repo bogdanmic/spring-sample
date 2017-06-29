@@ -1,34 +1,43 @@
-pipeline {
-    agent any
-
-    stages {
+node {
+    try {
+        notifyBuild('STARTED')
 
         stage('Checkout') {
             steps {
                 echo 'Checking out....'
                 checkout scm
-                notifyBuild('STARTED')
-
             }
         }
+
         stage('Build') {
             steps {
                 echo 'Building....'
             }
         }
+
         stage('Test') {
             steps {
                 echo 'Testing....'
-                currentBuild.result = "FAILED"
             }
         }
+
+        stage('Staging') {
+            echo 'Deploy Stage'
+        }
+
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                notifyBuild(currentBuild.result)
-
             }
         }
+
+    } catch (e) {
+        // If there was an exception thrown, the build failed
+        currentBuild.result = "FAILED"
+        throw e
+    } finally {
+        // Success or failure, always send notifications
+        notifyBuild(currentBuild.result)
     }
 }
 
