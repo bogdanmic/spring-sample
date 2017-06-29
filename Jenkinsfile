@@ -3,32 +3,20 @@ node {
         notifyBuild('STARTED')
 
         stage('Checkout') {
-            steps {
-                echo 'Checking out....'
-                checkout scm
-            }
+            echo 'Checking out....'
+            checkout scm
         }
 
         stage('Build') {
-            steps {
-                echo 'Building....'
-            }
+            echo 'Building....'
         }
 
         stage('Test') {
-            steps {
-                echo 'Testing....'
-            }
-        }
-
-        stage('Staging') {
-            echo 'Deploy Stage'
+            echo 'Testing....'
         }
 
         stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
+            echo 'Deploying....'
         }
 
     } catch (e) {
