@@ -1,35 +1,60 @@
 pipeline {
     agent any
+
+    stages {
+        notifyBuild('STARTED')
+
+        stage('Checkout') {
+            steps {
+                echo 'Checking out....'
+                checkout scm
+                slackSend(botUser: true, color: '#ff0000', message: 'Start build')
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building....'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing....'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+                slackSend(color: '#ff0000', message: 'End build')
+                notifyBuild(currentBuild.result)
+
+            }
+        }
+    }
+}
+
+
+node {
     try {
         notifyBuild('STARTED')
-        stages {
 
-
-            stage('Checkout') {
-                steps {
-                    echo 'Checking out....'
-                    checkout scm
-                    slackSend(botUser: true, color: '#ff0000', message: 'Start build')
-                }
-            }
-            stage('Build') {
-                steps {
-                    echo 'Building....'
-                }
-            }
-            stage('Test') {
-                steps {
-                    echo 'Testing....'
-                }
-            }
-            stage('Deploy') {
-                steps {
-                    echo 'Deploying....'
-                    slackSend(color: '#ff0000', message: 'End build')
-                }
-            }
-
+        stage('Prepare code') {
+            echo 'do checkout stuff'
         }
+
+        stage('Testing') {
+            echo 'Testing'
+            echo 'Testing - publish coverage results'
+        }
+
+        stage('Staging') {
+            echo 'Deploy Stage'
+        }
+
+        stage('Deploy') {
+            echo 'Deploy - Backend'
+            echo 'Deploy - Frontend'
+        }
+
     } catch (e) {
         // If there was an exception thrown, the build failed
         currentBuild.result = "FAILED"
