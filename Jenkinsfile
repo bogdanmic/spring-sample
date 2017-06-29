@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Checking out....'
                 checkout scm
+                slackSend color: '#ff0000', message: 'Test'
             }
         }
         stage('Build') {
