@@ -5,13 +5,13 @@ node {
         stage('Checkout') {
             echo 'Checking out....'
             checkout scm
-            docker.image('maven:3-jdk-8').inside {
-                sh 'mvn clean install'
-            }
         }
 
         stage('Build') {
             echo 'Building....'
+            docker.image('maven:3-jdk-8').inside {
+                sh 'mvn clean install'
+            }
         }
 
         stage('Test') {
