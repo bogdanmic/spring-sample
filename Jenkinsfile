@@ -1,32 +1,35 @@
-node {
-    try {
-        notifyBuild('STARTED')
+pipeline {
+    agent any
 
-        stage('Prepare code') {
-            echo 'do checkout stuff'
+    stages {
+
+        stage('Checkout') {
+            steps {
+                echo 'Checking out....'
+                checkout scm
+                slackSend(botUser: true, color: '#ff0000', message: 'Start build')
+                notifyBuild('STARTED')
+
+            }
         }
-
-        stage('Testing') {
-            echo 'Testing'
-            echo 'Testing - publish coverage results'
+        stage('Build') {
+            steps {
+                echo 'Building....'
+            }
         }
-
-        stage('Staging') {
-            echo 'Deploy Stage'
+        stage('Test') {
+            steps {
+                echo 'Testing....'
+            }
         }
-
         stage('Deploy') {
-            echo 'Deploy - Backend'
-            echo 'Deploy - Frontend'
-        }
+            steps {
+                echo 'Deploying....'
+                slackSend(color: '#ff0000', message: 'End build')
+                notifyBuild(currentBuild.result)
 
-    } catch (e) {
-        // If there was an exception thrown, the build failed
-        currentBuild.result = "FAILED"
-        throw e
-    } finally {
-        // Success or failure, always send notifications
-        notifyBuild(currentBuild.result)
+            }
+        }
     }
 }
 
