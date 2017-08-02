@@ -10,6 +10,7 @@ node {
         stage('Build') {
             echo 'Building....'
             docker.image('maven:3-jdk-8').inside {
+                sh 'cd playground'
                 sh 'mvn clean install'
             }
         }
