@@ -11,6 +11,7 @@ node {
             echo 'Building....'
             docker.image('maven:3-jdk-8').inside {
                 sh 'cd playground'
+                sh 'pwd'
                 sh 'mvn clean install'
             }
         }
