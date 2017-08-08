@@ -11,6 +11,8 @@ public class PlaygroundApplicationTests {
 
 //	@Test
 	public void contextLoads() {
+
+		// Disabled this test for now.
 	}
 
 }
