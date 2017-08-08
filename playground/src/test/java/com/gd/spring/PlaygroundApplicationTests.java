@@ -9,10 +9,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 //@SpringBootTest
 public class PlaygroundApplicationTests {
 
-//	@Test
-	public void contextLoads() {
+    //@Test
+    public void contextLoads() {
 
-		// Disabled this test for now.
-	}
+        // Disabled this test for now.
+    }
 
 }
